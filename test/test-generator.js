@@ -16,7 +16,6 @@ describe('Generator test', function () {
     }, function () {
       assert.file([
         '.editorconfig',
-        '.jshintrc',
         '.bowerrc',
         '.babelrc',
         '.gitignore',
@@ -67,7 +66,6 @@ describe('Generator test', function () {
       ]);
 
       assert.noFile([
-        '.babelrc',
         'app/scripts.babel/background.js',
         'app/scripts.babel/chromereload.js'
       ]);

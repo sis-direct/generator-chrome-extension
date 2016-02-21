@@ -205,16 +205,6 @@ module.exports = yeoman.Base.extend({
     );
   },
 
-  jshint: function () {
-    this.fs.copyTpl(
-      this.templatePath('jshintrc'),
-      this.destinationPath('.jshintrc'),
-      {
-        testFramework: this.options['test-framework']
-      }
-    );
-  },
-
   editorConfig: function () {
     this.fs.copy(
       this.templatePath('editorconfig'),
@@ -295,10 +285,6 @@ module.exports = yeoman.Base.extend({
   },
 
   babel: function () {
-    if (!this.options.babel) {
-      return;
-    }
-
     this.fs.copy(
       this.templatePath('babelrc'),
       this.destinationPath('.babelrc')
