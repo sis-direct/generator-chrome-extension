@@ -13,7 +13,7 @@ module.exports = yeoman.Base.extend({
 
     yeoman.Base.apply(this, arguments);
 
-    // preapre options
+    // prepare options
     this.option('test-framework', {
       desc: 'Test framework to be invoked',
       type: String,
@@ -116,7 +116,7 @@ module.exports = yeoman.Base.extend({
       }
     ];
 
-    this.prompt( prompts , function(answers) {
+    this.prompt( prompts ).then(function(answers) {
       var isChecked = function (choices, value) {
         return choices.indexOf(value) > -1;
       };
